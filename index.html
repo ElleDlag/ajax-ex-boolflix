@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+    <script src="assets/js/ajax.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+
+    <link rel="stylesheet" href="assets/base/class.css">
+    <link rel="stylesheet" href="assets/base/animation.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>title</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top main-nav">
+        <a class="navbar-brand bool-logo" href="#">BOOLFLIX</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serie Tv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Film</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aggiunti di recente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">La mia lista</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0 form-search">
+            <input class="form-control mr-sm-2 input-search" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 btn-go-search" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </nav>
+
+
+    <!-- main content -->
+    <main>
+
+        <!-- section header -->
+        <header id="header" class="">
+            <img class="header_image" src="assets/img/AAAABUSqwg79mGXbxC0C-hadVflODi9ozoFEslCzz3I56sbGYKbzNRryNM4aUJlznjpa8HsWtt83N4nSWoK999VZT5KyY1Oi.webp" alt="">
+            <div class="wrapper-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="wrapper-result d-flex flex-wrap">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+
+
+        <!-- section  -->
+        <section id="" class="">
+            
+        </section>
+
+
+        <!-- section  -->
+        <section id="" class="">
+        </section>
+
+
+        <!-- section  -->
+        <section id="" class="">
+        </section>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <script id="template-videinfo" type="text/x-handlebars-template">
+            <div class="col-3">
+                <div class="wrapper">
+                    <h1>{{title}}</h1>
+                    <img src="{{poster}}" alt="">
+                    <div class="description">
+                    {{description}}
+                    </div>
+                    <div class="language">
+                    {{language}}
+                    </div>
+                    <div class="year">
+                    {{year}}
+                    </div>
+                </div>
+                
+            </div>
+            </script>
+    </footer>
+
+
+</body>
+</html>
