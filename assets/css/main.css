@@ -1,3 +1,4 @@
+/* #region  BASE */
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,8 @@
 }
 
 body {
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
@@ -20,6 +21,8 @@ ul,
 li {
     list-style-type: none
 }
+
+/* #endregion */
 
 /* #region  MAIN NAVBAR */
 .main-nav {
@@ -50,54 +53,232 @@ li {
 
 /* #endregion */
 
-
-#header{
-    width:100%;
-    height:auto;
-    position:relative;
-    height:100%;
-    border:1px solid red;
-    background:rgb(7, 53, 7)
+/* #region  START HEADER CONTAINER */
+#header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: rgb(7, 53, 7)
 }
-.header_image{
+
+.header_image {
     position: absolute;
-    width:100%;
-    top:0;
-    left:0;
-    z-index:0
-    
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0
 }
-.wrapper-content{
-   /*  position: absolute; */
-    margin-top:80px;
-    width:100%;
-    
+
+.wrapper-content {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+
 }
-.col-3{
-    padding:5px;
+
+.wrapper-result {
+    width: 100%;
+    z-index: 1
 }
-.col-3 .wrapper{
+
+.wrapper-result .col-xl-3,
+.wrapper-result .col-lg-4,
+.wrapper-result .col-md-6,
+.wrapper-result .col-sm-12 {
+    padding: 15px 5px;
+    margin-bottom: 10px;
+}
+
+/* #endregion */
+
+/* #region  FLIP CARD ACTION */
+.wrapper-result .wrapper-card {
+    /* display:flex; */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
     text-align: center;
-    border:1px solid rgba(255, 255, 255, 0.461);
-    color:white;
-    background:rgba(0, 0, 0, 0.351);
-    height: 600px;
-    padding:20px;
+    border: 1px solid rgba(255, 255, 255, 0.461);
+    color: white;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 1800px;
+    perspective: 1800px;
+    transition: transform 750ms ease;
 }
-.col-3 .wrapper h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.wrapper-result .wrapper-card:hover {
+    transform: rotateY(180deg);
+}
+
+.wrapper-card .card-front {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    backface-visibility: hidden;
+    border-radius: 8px;
+
+}
+
+
+.wrapper-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    transform: rotateY(180deg);
+    padding: 20px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    color: white
+}
+
+/* #endregion */
+
+/* #region  CARD-front POSTER */
+.wrapper-card .img-poster img {
+    width: 100%;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.wrapper-card .no-img-poster img {
+    background: #686868;
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* #endregion */
+
+/* #region  CARD-back  INFO REGION */
+
+.wrapper-card h1 {
+    width: 100%;
     font-size: 2rem;
-    height: 50px;
-    color:white;
+    color: white;
+    padding: 13px 0;
+}
+
+.wrapper-card h2 {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.wrapper-card .vote {
+    display: none
+}
+
+.wrapper-card .stars {
+    position: relative;
+    height: 2.5rem;
+    width: 123px;
+    margin: auto;
+}
+
+.wrapper-card .stars>* {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrapper-card .star-back {
+    opacity: 0.5;
+}
+
+.wrapper-card .star-front {
+    white-space: nowrap;
+    overflow: hidden;
+    color: #faff13;
 
 }
-.wrapper-result img{
-    max-height:300px;
-    margin:auto;
+
+.wrapper-card .stars i.fas {
+    font-size: 2rem;
 }
-.wrapper-result .description{
-    font-size:1.3rem;
+.wrapper-card ul li{
+    margin: 10px 0;
+}
+/* #region  lingua anno */
+.wrapper-card .lang-year {
+    /* border: 1px solid white; */
+    align-items: center;
 
 }
+
+.wrapper-card .language.flag {
+
+    width: fit-content;
+}
+
+.wrapper-card .language.flag img {
+    max-height: 24px;
+
+}
+
+.wrapper-card .year {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+/* #endregion */
+
+.wrapper-card .description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-height: 200px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+/* #endregion */
+
+
+
+
+
+/* #region  MEDIA QUERY */
+@media (min-width:1200px) {
+    .wrapper-result .wrapper-card {
+        height: 410px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .wrapper-result .wrapper-card {
+        height: 463px;
+    }
+}
+
+@media (min-width:769px) and (max-width:991px) {
+    .wrapper-result .wrapper-card {
+        height: 523px;
+    }
+}
+
+@media (min-width:576px) and (max-width:768px) {
+    .wrapper-result {
+        padding: 10%
+    }
+
+    .wrapper-result .wrapper-card {
+        height: 631px;
+    }
+}
+
+/* #endregion */

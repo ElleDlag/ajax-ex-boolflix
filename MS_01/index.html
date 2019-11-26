@@ -65,7 +65,7 @@
             <div class="wrapper-content">
                 <div class="container">
                     <div class="row">
-                        <div class="wrapper-result d-flex flex-nowrap">
+                        <div class="wrapper-result d-flex flex-wrap">
                             
                         </div>
                     </div>
@@ -96,66 +96,21 @@
     <!-- footer -->
     <footer id="footer">
         <script id="template-videinfo" type="text/x-handlebars-template">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="wrapper-card">
-                  <div class="wrapper-poster-img card-front">
-                    {{#if poster}}
-                    <div class="poster img-poster">
+            <div class="col-3">
+                <div class="wrapper">
+                    <h1>{{title}}</h1>
                     <img src="{{poster}}" alt="">
+                    <div class="description">
+                    {{description}}
                     </div>
-                    {{else}}
-                    <div class="poster no-img-poster">
-                    <img src="assets/img/nopreview.png" alt="">
+                    <div class="language">
+                    {{language}}
                     </div>
-                    {{/if}}
-                  </div>
-                  <div class="wrapper-movie-info card-back">
-                      <h1>{{title}}</h1>
-                      <div class="vote">
-                        {{vote}}
-                      </div>
-                      <div class="stars">
-                        <div class="star-back">
-                          {{#each star}}
-                          <span>
-                          <i class='{{this}}'></i>
-                          </span>
-                          {{/each}}
-                        </div>
-                        <div class="star-front" style="width:{{vote}}">
-                          {{#each star}}
-                          <span>
-                          <i class='{{this}}'></i>
-                          </span>
-                          {{/each}}
-                        </div>
-                      </div>
-                      <ul>
-                        <li><h2>{{title_originale}}</h2></li>
-                        <li>
-                          <div class="lang-year d-flex flex-nowrap">
-                            <div class='language flag flag-{{language}}'>
-                              <img src="assets/img/flag/{{language}}-100.png" alt="">
-                            </div>
-                            <div class="year">
-                            {{year}}
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                            <div class="description">
-                                {{description}}
-                                </div>
-                        </li>
-                      </ul>
-                      
-                      
-                      
-                      
-                      
-                      
-                  </div>
+                    <div class="year">
+                    {{year}}
+                    </div>
                 </div>
+                
             </div>
             </script>
     </footer>

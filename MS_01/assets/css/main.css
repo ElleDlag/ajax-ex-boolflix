@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px
+}
+
+body {
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none
+}
+
+/* #region  MAIN NAVBAR */
+.main-nav {
+    height: 60px;
+    background: linear-gradient(to bottom, black -20%, rgba(0, 0, 0, 0) 90%);
+}
+
+.navbar-brand.bool-logo {
+    color: red;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.main-nav .nav-link {
+    font-size: 1.5rem
+}
+
+.form-search input,
+.fa.fa-search {
+    font-size: 1.5rem;
+    color: white
+}
+
+.btn-go-search {
+    padding: 7px;
+    border: 1px solid white;
+}
+
+/* #endregion */
+
+
+#header{
+    width:100%;
+    height:auto;
+    position:relative;
+    height:100%;
+    border:1px solid red;
+    background:rgb(7, 53, 7)
+}
+.header_image{
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:0
+    
+}
+.wrapper-content{
+   /*  position: absolute; */
+    margin-top:80px;
+    width:100%;
+    
+}
+.col-3{
+    padding:5px;
+}
+.col-3 .wrapper{
+    text-align: center;
+    border:1px solid rgba(255, 255, 255, 0.461);
+    color:white;
+    background:rgba(0, 0, 0, 0.351);
+    height: 600px;
+    padding:20px;
+}
+.col-3 .wrapper h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 50px;
+    color:white;
+
+}
+.wrapper-result img{
+    max-height:300px;
+    margin:auto;
+}
+
+.wrapper-result .description{
+    font-size:1.3rem;
+}
