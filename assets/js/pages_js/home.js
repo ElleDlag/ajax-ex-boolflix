@@ -70,10 +70,16 @@ $(function(){
     $('#home').click(function(){
         $('.nav-item').each(function (i) {
             $('.nav-item').removeClass('active');
-            $(this).addClass('active')
+            $('.nav-item.home').addClass('active')
         });
         if(pageCurrent != 'home'){
             theAjax(settings,transferData)
+            var path ='././assets/js/pages_js/'
+
+            $.getScript(path + 'series.js',function(){console.log(pageCurrent)})
+            $.getScript(path + 'movies.js',function(){console.log(pageCurrent)})
+            $.getScript(path + 'latests.js',function(){console.log(pageCurrent)})
+
             if($('.wrapper-result').html() != "") {
                 $('.wrapper-result').html("")
                 $('section').remove()
