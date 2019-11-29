@@ -27,7 +27,7 @@ $(function(){
                 });
             }
         }
-        //console.log(res.results)
+        console.log(res.results)
         var printResult = res
         //pageCurrent='home'
         if ($('.nav-item.home').hasClass('active')){/** ---- PARTIAL INJECT ----- */
