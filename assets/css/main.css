@@ -4,9 +4,11 @@
     padding: 0;
     font-size: 10px
 }
-:root{
-    --default-img:"";
+
+:root {
+    --default-img: "";
 }
+
 body {
     width: 100%;
     height: auto;
@@ -23,8 +25,9 @@ ul,
 li {
     list-style-type: none
 }
+
 .no-gutters,
-.no-gutters [class^='col-']{
+.no-gutters [class^='col-'] {
     margin-right: 0;
     margin-left: 0;
     padding-right: 0;
@@ -66,8 +69,8 @@ li {
 #header {
     position: relative;
     width: 100%;
-    height: 80vh;
-    background: rgb(77, 77, 77);     
+    height: 65vh;
+    background: rgb(77, 77, 77);
 }
 
 .header_image {
@@ -85,220 +88,125 @@ li {
 }
 
 .wrapper-result {
-    
-    width: 100%;
-    height:100%;
-    z-index: 1;
-    border:1px solid red;
-    position:relative;
-}
 
-.home-list{
-    position:absolute;
-    top:0;
-    bottom:0;
-    width:100%;
-    height:100%;
-    border: 1px solid white;
-    font-size:2rem;
-    padding:20px;
-}
-.home-list h1{
-    color:white;
-    margin-top: 200px;
-    border:1px solid yellow;
-    width:fit-content;
-    padding:20px;
-}
-
-/* #endregion */
-
-/* #region  FLIP CARD ACTION */
-.wrapper-result .wrapper-card {
-    /* display:flex; */
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.461);
-    color: white;
-    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    transform: rotateY(0);
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -webkit-perspective: 1800px;
-    perspective: 1800px;
-    transition: transform 750ms ease;
-}
-
-.wrapper-result .wrapper-card:hover {
-    transform: rotateY(180deg);
-}
-
-.wrapper-card .card-front {
-    width: 100%;
-    height: fit-content;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    backface-visibility: hidden;
-    border-radius: 8px;
-
-}
-
-
-.wrapper-card .card-back {
-    position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    border-radius: 8px;
-    transform: rotateY(180deg);
-    padding: 20px;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
-    color: white
-}
-
-/* #endregion */
-
-/* #region  CARD-front POSTER */
-.wrapper-card .img-poster img {
-    width: 100%;
-    border-radius: 8px;
-    margin: auto;
-}
-
-.wrapper-card .no-img-poster img {
-    background: #686868;
-    width: 100%;
-    margin: auto;
-    border-radius: 8px;
-}
-
-/* #endregion */
-
-/* #region  CARD-back  INFO REGION */
-
-.wrapper-card h1 {
-    width: 100%;
-    font-size: 2rem;
-    color: white;
-    padding: 13px 0;
-}
-
-.wrapper-card h2 {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    font-weight: 300;
-    text-align: left;
-}
-
-.wrapper-card .vote {
-    display: none
-}
-
-.wrapper-card .stars {
+    border: 1px solid red;
     position: relative;
-    height: 2.5rem;
-    width: 123px;
-    margin: auto;
 }
 
-.wrapper-card .stars>* {
+.wrapper-result .btn-ctrl {
     position: absolute;
-    width: 100%;
+    z-index: 1;
+    right: 50px;
+    ;
+    bottom: 50px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+    color: white;
+}
+
+.wrapper-result .btn-ctrl:focus {
+    outline: none;
+}
+
+.wrapper-result i.fa {
+    font-size: 1.5rem;
+}
+
+.wrapper-result button.prev {
+    margin-right: 120px;
+}
+
+.wrapper-result button.play,
+.wrapper-result button.pause {
+    margin-right: 60px;
+}
+
+.wrapper-result button.play {
+    display: none;
+}
+
+.wrapper-result .state-button {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    color: black;
+    border: 1px solid red;
+    z-index: 1;
+}
+
+.single-res {
+    background: powderblue;
+    position: absolute;
     top: 0;
     left: 0;
-}
-
-.wrapper-card .star-back {
-    opacity: 0.5;
-}
-
-.wrapper-card .star-front {
-    white-space: nowrap;
-    overflow: hidden;
-    color: #faff13;
-
-}
-
-.wrapper-card .stars i.fas {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
     font-size: 2rem;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
 }
-.wrapper-card ul li{
-    margin: 10px 0;
+.series-result{
+    background: purple;
+}
+.movies-result{
+    background: rgb(3, 87, 20);
+}
+.latests-result{
+    background: rgb(4, 12, 78);
+}
+.likes-result{
+    background: rgb(238, 132, 38);
 }
 
-/* #endregion */
 
-/* #region  lingua anno */
-.wrapper-card .lang-year {
-    /* border: 1px solid white; */
-    align-items: center;
-
+.single-res.on {
+    opacity: 1
 }
 
-.wrapper-card .language.flag {
-
+.single-res h1 {
+    color: white;
+    margin-top: 200px;
+    border: 1px solid yellow;
     width: fit-content;
-}
-
-.wrapper-card .language.flag img {
-    max-height: 24px;
-
-}
-
-.wrapper-card .year {
-    font-size: 1.5rem;
-    margin-left: 20px;
+    padding: 20px;
 }
 
 /* #endregion */
 
-.wrapper-card .description {
-    font-size: 1.5rem;
-    font-weight: 300;
-    max-height: 200px;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/* #region  SECTIONS SCROLLERS CONTAINER */
+section {
+    width:100%;
+    height:auto;
+    margin-bottom:30px;
+}
+section .wrapper-section{
+    width:100%;
+    height:200px;
+    background: papayawhip;
+    
 }
 
+/* #endregion */
 
 
 
+/* ------ REPONSIVE AREA ------- */
 
 /* #region  MEDIA QUERY */
-@media (min-width:1200px) {
-    .wrapper-result .wrapper-card {
-        height: 410px;
-    }
-}
+@media (min-width:1200px) {}
 
-@media (min-width:992px) and (max-width:1199px) {
-    .wrapper-result .wrapper-card {
-        height: 463px;
-    }
-}
+@media (min-width:992px) and (max-width:1199px) {}
 
-@media (min-width:769px) and (max-width:991px) {
-    .wrapper-result .wrapper-card {
-        height: 523px;
-    }
-}
+@media (min-width:769px) and (max-width:991px) {}
 
-@media (min-width:576px) and (max-width:768px) {
-    .wrapper-result {
-        padding: 10%
-    }
-
-    .wrapper-result .wrapper-card {
-        height: 631px;
-    }
-}
+@media (min-width:576px) and (max-width:768px) {}
 
 /* #endregion */

@@ -1,13 +1,13 @@
 27/11/2019 Piano di rebuidling Boolflix
 Fase 1 - settings:
     - ricollocare il menu alla rispettiva chiamata API n.b nel menu devono esere chiamati gli upcoming//testare solo l'API
-    - utilizzare include per collegare gli script HB //sarebbe più bello in php XD
+    - utilizzare include per collegare gli script HB //utilizzato ajax
     - attach il rispettivo contenitore via handlebars //per ora solo lista
-    - testare la lista
+    - testare la lista//OK //per likes creare finto json personale
 
 Fase 2 - grafica:
     - dividere la navbar dalla ricerca
-    - mettere il risultato dei best in un container scrollabile
+    - mettere il risultato delle chiamate in un container scrollabile
     - impostare e testare la grafica rif slider
 
 

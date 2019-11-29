@@ -1,0 +1,37 @@
+<script id="template-movies" type="text/x-handlebars-template">
+    {{#results}}
+        <div class="single-res title-list movies-result" data-relpath='{{backdrop_path}}'>
+            <h1>{{title}}</h1>
+            <div><h2></h2></div>
+        </div>
+    {{/results}}
+    <button class="btn-ctrl next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+    <button class="btn-ctrl prev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+    <button class="btn-ctrl pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    <button class="btn-ctrl play"><i class="fa fa-play" aria-hidden="true"></i></button>
+    <span class="state-button">auto</span>
+</script>
+
+<script id="movies-scrollers" type="text/x-handlebars-template">
+    <!-- PUSH SCROLLER CONTAINERS -->
+            {{> partialHome}}
+            {{> partialSeries}}
+            {{> partialLatests}}
+            {{> partialLikes}}
+</script>
+
+<script id="partial-movies" type="text/x-handlebars-template">
+    <section class='movies-scroller'>
+        <div class="wrapper-section">
+            <div class="container-fluid h100">
+                <div class="row d-flex flex-nowrap no-gutters h100">
+                    {{#results}}
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 h-100">
+                        <h2>{{title}}</h2>
+                    </div> 
+                    {{/results}} 
+                </div>
+            </div>
+        </div>
+    </section>
+</script>

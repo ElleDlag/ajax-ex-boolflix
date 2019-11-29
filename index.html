@@ -11,13 +11,14 @@
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
-  <script src="assets/js/ajax.js"></script>
-  <script src="assets/js/home.js"></script>
-  <script src="assets/js/series.js"></script>
-  <script src="assets/js/movies.js"></script>
-  <script src="assets/js/latest.js"></script>
-  <script src="assets/js/like.js"></script>
-  <script src="assets/js/slide.js"></script>
+  <script src="assets/js/ajax/ajax.js"></script>
+  <script src="assets/js/pages_js/home.js"></script>
+  <script src="assets/js/pages_js/series.js"></script>
+  <script src="assets/js/pages_js/movies.js"></script>
+  <script src="assets/js/pages_js/latests.js"></script>
+  <script src="assets/js/pages_js/likes.js"></script>
+  <script src="assets/js/components_js/slide.js"></script>
+  <!-- <script src="assets/js/components_js/draggable.js"></script> -->
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
@@ -38,20 +39,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item home active">
           <a id="home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a id="serie" class="nav-link" href="#">Serie Tv</a>
+        <li class="nav-item series">
+          <a id="series" class="nav-link" href="#">Serie Tv</a>
         </li>
-        <li class="nav-item">
-          <a id="film" class="nav-link" href="#">Film</a>
+        <li class="nav-item movies">
+          <a id="movies" class="nav-link" href="#">Film</a>
         </li>
-        <li class="nav-item">
-          <a id="recent" class="nav-link" href="#">Aggiunti di recente</a>
+        <li class="nav-item latests">
+          <a id="latests" class="nav-link" href="#">Aggiunti di recente</a>
         </li>
-        <li class="nav-item">
-          <a id="myList" class="nav-link" href="#">La mia lista</a>
+        <li class="nav-item likes">
+          <a id="likes" class="nav-link" href="#">La mia lista</a>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0 form-search">
@@ -65,8 +66,6 @@
 
   <!-- main content -->
   <main>
-  
-
     <!-- section header -->
     <header id="header" class="">
       <img class="header_image"
@@ -77,30 +76,14 @@
           <div class="row d-flex flex-nowrap h-100 no-gutters ">
               <div class="col-12">
                 <div class="wrapper-result">
+                  
                 </div>
-              </div>
+              </div> 
           </div>
         </div>
       </div>
 
     </header>
-
-
-    <!-- section  -->
-    <section id="" class="">
-
-    </section>
-
-
-    <!-- section  -->
-    <section id="" class="">
-    </section>
-
-
-    <!-- section  -->
-    <section id="" class="">
-    </section>
-
   </main>
 
 
