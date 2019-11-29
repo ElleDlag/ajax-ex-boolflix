@@ -27,9 +27,15 @@ $(function(){
                 });
             }
         }
-        console.log(res.results)
+
         var printResult = res
-        //pageCurrent='home'
+        Handlebars.registerHelper("fullData", function(release_date) {
+            release_date = moment(release_date).format('DD MMMM YYYY')
+            return release_date
+        })
+       
+        
+        
         if ($('.nav-item.home').hasClass('active')){/** ---- PARTIAL INJECT ----- */
             $.ajax('././assets/pages/series.html').done(function (response){
                 $('body').append(response);
@@ -51,8 +57,8 @@ $(function(){
     
             /** ---- HEADER SECTION ----- */
             $.ajax('././assets/pages/home.html').done(function (response) {
-                $('body').append(response);
-    
+                $('body').append(response); 
+                
                 var testInMain = Handlebars.compile($('#template-home').html())
                 var scrollersHome = Handlebars.compile($('#home-scrollers').html())
                 $('.wrapper-result').append(testInMain(printResult))

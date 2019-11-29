@@ -4,7 +4,17 @@
             <div class="single-res home-list home-result">
                 <img src="https://image.tmdb.org/t/p/original{{backdrop_path}}" alt="" class="backdrop-main">
                 <h1>{{title}}</h1>
-                <div><h2></h2></div>
+                <div class="book-cover">
+                    <img class="book-cover" src="https://image.tmdb.org/t/p/original{{poster_path}}">
+                </div>
+                <div class="interactions">
+                    <ul>
+                        <li class="data" data-date="{{release_date}}"><h2>{{fullData release_date}}</h2></li>
+                        <li>PIPPO</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         {{/results}}
         <button class="btn-ctrl next"><i class="fa fa-forward" aria-hidden="true"></i></button>
