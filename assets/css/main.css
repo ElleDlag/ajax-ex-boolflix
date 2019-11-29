@@ -185,7 +185,7 @@ li {
 
 .single-res .backdrop-main{
     position: absolute;
-    background-position: center center;
+    background-position: center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

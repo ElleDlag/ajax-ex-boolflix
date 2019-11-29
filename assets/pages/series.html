@@ -1,6 +1,7 @@
 <script id="template-series" type="text/x-handlebars-template">
     {{#results}}
-        <div class="single-res name-list series-result" data-relpath='{{backdrop_path}}'>
+        <div class="single-res name-list series-result">
+            <img src="https://image.tmdb.org/t/p/original{{backdrop_path}}" alt="" class="backdrop-main">
             <h1>{{name}}</h1>
             <div><h2></h2></div>
         </div>
