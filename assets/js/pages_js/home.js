@@ -8,13 +8,14 @@ $(function(){
         "headers": {},
         "data": {
             page:1,
-            language:'en-US',
+            language:'it-IT',
             api_key:'fa0070d9667f3c692c69cdbcec6048f6',
             },
     }
     theAjax(settings,transferData)
     
     function transferData(res){
+        console.log(res)
         function pushSeries(){
             if(pageCurrent != 'home'){
                 $.ajax('././assets/pages/home.html').done(function (response) {
@@ -33,8 +34,6 @@ $(function(){
             release_date = moment(release_date).format('DD MMMM YYYY')
             return release_date
         })
-       
-        
         
         if ($('.nav-item.home').hasClass('active')){/** ---- PARTIAL INJECT ----- */
             $.ajax('././assets/pages/series.html').done(function (response){
